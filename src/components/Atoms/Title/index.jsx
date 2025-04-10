@@ -14,13 +14,10 @@ export const Title = ()=>{
 
 const StyledText = styled.div`
   color: ${COLOR.WHITE};
-  ${TEXT.M}
-  width: 100%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  ${TEXT.L}
   font-family: ${FONTFAMILY.ROBOTO};
-  @media (min-width: ${BREAKPOINT.MEDIUM}) {
-  ${TEXT.L} 
+  @media (max-width: ${BREAKPOINT.MEDIUM}) {
+  ${TEXT.M} 
+  font-family: ${FONTFAMILY.NOTO_SANS};
   }
 `;
