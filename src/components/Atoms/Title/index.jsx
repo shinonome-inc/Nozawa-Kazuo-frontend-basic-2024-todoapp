@@ -16,8 +16,13 @@ const StyledText = styled.div`
   color: ${COLOR.WHITE};
   ${TEXT.L}
   font-family: ${FONTFAMILY.ROBOTO};
+  border: 1px solid ${COLOR.BLACK};
+  font-weight: 500;
+  letter-spacing: 0;
+  gap: 10px;
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
   ${TEXT.M} 
+  border: none;
   font-family: ${FONTFAMILY.NOTO_SANS};
   }
 `;
