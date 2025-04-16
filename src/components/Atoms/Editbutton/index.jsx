@@ -1,15 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import BREAKPOINT from "../../../variables/breakpoint.js";
-import COLOR from "../../../variables/color.js";
-import TEXT from "../../../variables/texts.js";
-import FONTFAMILY from "../../../variables/font_family.js";
+import COLOR from "../../../variables/color.js"
 import pencil from "../../../assets/svg/pencil.svg";
 
-export const EditButton = () => {
+export const EditButton = ({onClick}) => {
     return (
-        <StyledButton onClick= {() => console.log('click')}>
-            <img src={pencil}/>
+        <StyledButton onClick={(onClick)}>
+            <img src={pencil} alt="img"/>
         </StyledButton>)
         }
 
