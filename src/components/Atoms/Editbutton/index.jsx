@@ -28,4 +28,4 @@ const StyledButton = styled.button`
 const StyledImage = styled.img`
   width: 20px;
   height: 20px;
-`
+`;
