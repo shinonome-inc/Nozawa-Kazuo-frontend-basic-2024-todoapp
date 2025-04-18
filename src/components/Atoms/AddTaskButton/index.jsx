@@ -16,20 +16,28 @@ export const AddTaskButton = () =>{
 
 const StyledButton = styled.button`
     display: flex;
+    align-items: center;
     background-color: transparent;
     border: none;
     ${TEXT.S}
     font-family: ${FONTFAMILY.NOTO_SANS};
     color: ${COLOR.GREEN};
-
-`
+    gap: 10px;
+    padding: 2px 6px;
+    &:hover {
+    background-color: ${COLOR.GREEN_TRANSLUCENT};
+    border-radius: 12px;
+    }
+`;
 const StyledImage = styled.img`
     width: 20px;
     height: 20px;
-
-
-`
+    
+    
+`;
 const StyledText = styled.p`
     margin: 0;
-
-`
+    letter-spacing: 0;
+    font-weight: 500;
+    line-height: 20px;
+`;
