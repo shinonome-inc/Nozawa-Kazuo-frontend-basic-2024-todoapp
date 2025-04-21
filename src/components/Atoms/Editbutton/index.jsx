@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color.js"
-import COLOR from "../../../variables/color.js";
 import pencil from "../../../assets/svg/pencil.svg";
 
 export const EditButton = ({onClick}) => {
