@@ -8,14 +8,8 @@ export const EditButton = ({onClick}) => {
     return (
         <StyledButton onClick={(onClick)}>
             <img src={pencil} alt="img"/>
-        </StyledButton>)
-        }
-export const EditButton = (onClick) => {
-  return (
-    <StyledButton onClick={onClick}>{/*ここの{}にconstを使うときに処理を足すことで機能を付けられる*/}
-      <StyledImage src={pencil} alt="image"/>
-    </StyledButton>
-  );
+        </StyledButton>
+      );
 };
 
 const StyledButton = styled.button`
