@@ -1,49 +1,46 @@
-import React, { useRef, useEffect } from 'react';
-import styled from 'styled-components';
-import COLOR from '../../../variables/color';
+import React, { useRef, useEffect } from "react";
+import styled from "styled-components";
+import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts.js";
 import FONTFAMILY from "../../../variables/font_family.js";
 
+export default function Inputcomponent({ onEditComplete, defaultValue }) {
+  const inputRef = useRef();
 
-
-export default function Inputcomponent({ onEditComplete,defaultValue }) {
-    const inputRef = useRef();
-    
-    const handleBlur = () => {
-        const value = inputRef.current.value
-        if (onEditComplete){
-            onEditComplete(value)
-        }
+  const handleBlur = () => {
+    const value = inputRef.current.value;
+    if (onEditComplete) {
+      onEditComplete(value);
     }
+  };
 
-    const handleKeyDown = () => {
-        if (e.key === 'Enter') {
-            const value = inputRef.current.value
-            if (onEditComplete){
-                onEditComplete(value)
-            }
-        }
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      const value = inputRef.current.value;
+      if (onEditComplete) {
+        onEditComplete(value);
+      }
     }
-   
-  
-    useEffect(() => {
-      inputRef.current.focus();
-    }, []);
-    
-  
-    return (
-        <Styledwrapper>
-            <Styledinput defaultValue={defaultValue} ref = {inputRef} onBlur={handleBlur} onkeyDown={handleKeyDown} >
-            </Styledinput>
-        </Styledwrapper>
+  };
 
-    );
-  }
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
+  return (
+    <Styledwrapper>
+      <Styledinput
+        defaultValue={defaultValue}
+        ref={inputRef}
+        onBlur={handleBlur}
+        onKeyDown={handleKeyDown}
+      />
+    </Styledwrapper>
+  );
+}
 const Styledwrapper = styled.div`
   display: flex;
-  flex-direction: column;
   width: 100%;
-  align-items:flex-start;
   padding: 0px 4px;
   border-radius: 2px;
   border: none;
@@ -60,17 +57,7 @@ const Styledinput = styled.input`
   font-family: ${FONTFAMILY.NOTO_SANS};
 
   &:focus {
-  border: none;
-  outline: none;
+    border: none;
+    outline: none;
   }
-
-
-
-
-
-
-
-
-
-
-`
+`;
