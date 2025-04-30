@@ -1,4 +1,4 @@
-import Inputcomponent from "./index";
+import Inputcomponent from './index';
 
 export default {
   component: Inputcomponent,
@@ -6,7 +6,9 @@ export default {
 
 export const Default = {
   args: {
-    defaultValue: "",
-    onEditComplete: "",
+    defaultValue: '',
+    onEditComplete: () => {
+      console.log('Editing complete');
+    },
   },
 };

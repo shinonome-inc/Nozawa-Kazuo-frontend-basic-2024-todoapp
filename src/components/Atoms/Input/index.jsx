@@ -4,6 +4,7 @@ import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts.js";
 import FONTFAMILY from "../../../variables/font_family.js";
 
+
 export default function Inputcomponent({ onEditComplete, defaultValue }) {
   const inputRef = useRef();
 
