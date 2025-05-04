@@ -1,0 +1,70 @@
+1propsの設定
+1
+onTasknameChange:タスクのチェックボックスが押下されたときに実行するコールバック関数。
+                 変更後のタスク名
+onTaskcomplete:タスクのチェックボックスが押下されたときに実行するコールバック関数。
+                引数なし
+taskname:    表示するタスク名（デフォルトの値=""）
+defaultEditing:コンポーネントが生成されたときの[State]isEditing の値（デフォルトの値=false）
+
+
+
+export default function task = ({onTasknameChanege,onTaskcomplete,taskName,defaultEditing})
+2 stateの設定
+const {isediting,setiseditng} = useState(defaultediting)
+
+        現在の状態,状態を更新する
+
+3　そのほかの関数
+
+１onEditcomplete(value)
+1.1タスクの編集が完了したとき
+
+1.2処理
+const onEditcomplete = (value) =>{
+isediting = false
+OnTaskNameChange(value)
+}
+
+
+
+2onEditbuttonClick
+const onEditbuttonclick
+isediting = true
+<editbutton onClick={onEditbuttonclick}>
+
+全体像を確認する
+<StyledWrapper>
+    <StyledCheckbox>
+    CheckBox<-コンポーネントを持ってくる,onclickにonTaskcompleteを持ってくる
+    </StyledCheckbox>
+    if ここでif文の処理を持ってくる(isEditingがtrueの場合とそうでない場合)
+    input <-trueの場合はまだ編集中なので、inputの入力画面が表示される
+            
+    else 
+    StyledNameAndButtonWrapper
+    styledtaskname
+    tasknameというpropsが表示されるようにする
+    styledtaskname
+    StyledEditButtonWrapper
+    editbuttonコンポーネントが表示されるようにする
+    StyledEditButtonWrapper
+</StyledWrapper>
+１　コンポーネントを呼び出す方法
+https://ja.react.dev/learn/importing-and-exporting-components
+default exportされていない場合は{}で名前付きimportをする必要がある
+2 reactを用いた条件分岐
+https://qiita.com/horiyee/items/fa07f5baa6028b9746ce
+if文
+これで書いてみようとしたが、returnの中にさらにreturnを書いてしまい変なコードになってしまうかもしれないので
+辞めておく
+
+&&
+この方法も頑張ればできそうだったが、関数の処理が難しそうなので、別の機会にやる
+
+? :
+これならtrueとfalse両方の場合のhtmlを書くことが出来る
+
+css作成
+1 textの部分とbuttonの部分が離れている.
+>

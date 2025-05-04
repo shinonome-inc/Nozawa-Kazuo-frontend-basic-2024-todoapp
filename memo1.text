@@ -9,3 +9,7 @@
                     - onTaskNameChange=引数に変更後のタスク名 value を受け取る関数。[OtherFunc]onTaskNameChange を、引数に value、index を与えて実行する。
                     - taskName=task.name
                     - defaultIsEditing=task.initializing
+
+パット見て必要そうな機能がaddbuttonを押すとTask機能が実装される機能
+>addbuttonのonclickにtureかfalseのようなbooleanを変える機能を付けて、falseならaddbuttonだけ
+trueならtaskが表示されるようなhtmlを書く
