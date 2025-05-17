@@ -18,9 +18,7 @@ export default function Inputcomponent({ onEditComplete, defaultValue }) {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       const value = inputRef.current.value;
-      if (onEditComplete) {
-        onEditComplete(value);
-      }
+      onEditComplete(value);
     }
   };
 
