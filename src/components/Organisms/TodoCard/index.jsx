@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts.js";
@@ -32,6 +32,19 @@ export default function TodoCard() {
       );
     }
   };
+
+  useEffect(() => {
+    const TaskJson = localStorage.getItem("taskList");
+    if (TaskJson){
+    setTaskList(JSON.parse(TaskJson))
+    }
+    }, []);
+
+  useEffect(() => {
+    localStorage.setItem("taskList",JSON.stringify(taskList))
+  },[taskList]);
+
+
   return (
     <StyledWrapper>
       <AddTaskButton onClick={onAddTaskButtonClick} />
