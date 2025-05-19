@@ -54,12 +54,14 @@ const StyledWrapper = styled.div`
   background-color: ${COLOR.LIGHT_BLACK};
   border-radius: 4px;
   padding: 20px;
-  gap: 10px;
   align-items: flex-start;
+  flex-direction: column;
 `;
 const StyledTaskList = styled.div`
+  margin-top: 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 10px;
   
 `;
