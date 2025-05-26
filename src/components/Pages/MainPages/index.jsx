@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import TodoCard from "../../Organisms/TodoCard/index.jsx";
-import {Title} from "../../Atoms/Title/index.jsx"
+import TodoCard from "../../Organisms/TodoCard/index";
+import {Title} from "../../Atoms/Title/index"
 
 export default function MainPages() {
     return(
@@ -31,6 +31,7 @@ const StyledWrapper = styled.div`
 ;`
 const TodoCardWrapper = styled.div`
     width: 500px;
+    max-width: 100%;
 
 
 `
