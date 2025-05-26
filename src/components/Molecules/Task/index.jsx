@@ -7,7 +7,7 @@ import { CheckBox } from "../../../components/Atoms/CheckBox/index.jsx";
 import Input from "../../../components/Atoms/Input/index.jsx";
 import { EditButton } from "../../../components/Atoms/Editbutton/index.jsx";
 export default function Task({
-  onTaskNameChanege,
+  onTaskNameChange,
   onTaskComplete,
   taskName = "",
   defaultEditing = false,
@@ -24,17 +24,13 @@ export default function Task({
 
   return (
     <StyledWrapper>
-      <div>
         <CheckBox onClick={onTaskComplete} />
-      </div>
       {isEditing ? (
         <Input onEditComplete={onEditComplete} defaultValue={taskName} />
       ) : (
         <StyledNameAndButtonWrapper>
           <StyledTaskName>{taskName}</StyledTaskName>
-          <div>
             <EditButton onClick={onEditButtonClick} />
-          </div>
         </StyledNameAndButtonWrapper>
       )}
     </StyledWrapper>
@@ -52,6 +48,7 @@ const StyledWrapper = styled.div`
 
 const StyledNameAndButtonWrapper = styled.div`
   display: flex;
+  width: 100%;
   gap: 10px;
 `;
 
