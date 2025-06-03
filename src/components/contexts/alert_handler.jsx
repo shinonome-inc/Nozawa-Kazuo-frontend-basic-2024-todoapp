@@ -9,12 +9,12 @@ export const AlertHandlerProvider = ({ children }) => {
   });
 
   const setAlert = (errorText) => {
-    setAlertState({ visible: true, errorText });
+    setAlertState({ visible: true, errorText});
   };
 
-  const closeAlert = () => {
+  function closeAlert() {
     setAlertState({ visible: false, errorText: "" });
-  };
+  }
 
   const contextValue = {
     ...alertState,
