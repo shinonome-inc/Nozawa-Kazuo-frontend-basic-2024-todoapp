@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts.js";
-<<<<<<< HEAD
 import FONTFAMILY from "../../../variables/font_family.js";
-=======
->>>>>>> main
 import Task from "../../../components/Molecules/Task/index.jsx";
 import { AddTaskButton } from "../../Atoms/AddTaskButton/index.jsx";
 
