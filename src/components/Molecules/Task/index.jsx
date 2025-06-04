@@ -42,7 +42,8 @@ const StyledWrapper = styled.div`
   padding: 2px 6px;
   gap: 10px;
   width: 100%;
-  justify-content: space-between;
+  
+
 `;
 
 
@@ -50,11 +51,14 @@ const StyledNameAndButtonWrapper = styled.div`
   display: flex;
   width: 100%;
   gap: 10px;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 
 
 const StyledTaskName = styled.div`
+  
   width: 100%;
   ${TEXT.S}
   color: ${COLOR.LIGHT_GRAY};
