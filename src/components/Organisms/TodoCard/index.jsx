@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts.js";
+import FONTFAMILY from "../../../variables/font_family.js";
 import Task from "../../../components/Molecules/Task/index.jsx";
 import { AddTaskButton } from "../../Atoms/AddTaskButton/index.jsx";
 
@@ -57,9 +58,9 @@ const StyledWrapper = styled.div`
 `;
 const StyledTaskList = styled.div`
   margin-top: 10px;
-  flex-direction: column;
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 10px;
+  
 `;

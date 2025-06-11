@@ -30,8 +30,7 @@ export default function Task({
       ) : (
         <StyledNameAndButtonWrapper>
           <StyledTaskName>{taskName}</StyledTaskName>
-          <EditButton onClick={onEditButtonClick} />
-        
+            <EditButton onClick={onEditButtonClick} />
         </StyledNameAndButtonWrapper>
       )}
     </StyledWrapper>
@@ -50,6 +49,7 @@ const StyledWrapper = styled.div`
 
 const StyledNameAndButtonWrapper = styled.div`
   display: flex;
+  width: 100%;
   gap: 10px;
   justify-content: space-between;
   width: 100%;
