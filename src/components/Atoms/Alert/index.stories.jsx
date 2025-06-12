@@ -1,5 +1,14 @@
+import React from "react";
 import { Alert } from "./index";
+import { AlertHandlerProvider } from "../../contexts/alert_handler"
 
-export default {component: Alert};
+export default {
+  title: "Components/Atoms/Alert",
+  component: Alert,
+};
 
-export const Default = {};
+export const Default = () => (
+  <AlertHandlerProvider>
+    <Alert />
+  </AlertHandlerProvider>
+);

@@ -36,15 +36,14 @@ export default function TodoCard() {
 
   useEffect(() => {
     const TaskJson = localStorage.getItem("taskList");
-    if (TaskJson){
-    setTaskList(JSON.parse(TaskJson))
+    if (TaskJson) {
+      setTaskList(JSON.parse(TaskJson));
     }
-    }, []);
+  }, []);
 
   useEffect(() => {
-    localStorage.setItem("taskList",JSON.stringify(taskList))
-  },[taskList]);
-
+    localStorage.setItem("taskList", JSON.stringify(taskList));
+  }, [taskList]);
 
   return (
     <StyledWrapper>
@@ -75,5 +74,4 @@ const StyledTaskList = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  
 `;

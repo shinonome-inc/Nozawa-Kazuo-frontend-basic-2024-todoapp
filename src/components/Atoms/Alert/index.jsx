@@ -6,22 +6,17 @@ export const Alert = () => {
 
   return (
     <StyledWrapper active={AlertHandlerContext.visible}>
-      <AlertWrapper>
-       {AlertHandlerContext.errorText}
-      </AlertWrapper>
+      {AlertHandlerContext.errorText}
     </StyledWrapper>
-  )
-}
+  );
+};
 
 //ここにアニメーション機能と上に重なるように表示される機能を加える
 const StyledWrapper = styled.div`
   dislay: flex;
   padding: 10px 20px;
   align-items: center;
-
-  opacity: ${(props) => props.active ? 0 : 1}
+  transform: ${(props) =>
+    props.visible ? "translate(-50%,40%)" : "translate(-50%,0%)"};
   
-
-const AlertWrapper = styled.div`
-
-
+`;

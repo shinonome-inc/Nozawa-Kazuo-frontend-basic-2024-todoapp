@@ -9,7 +9,7 @@ export const AlertHandlerProvider = ({ children }) => {
   });
 
   const setAlert = (errorText) => {
-    setAlertState({ visible: true, errorText});
+    setAlertState({ visible: true, errorText });
   };
 
   function closeAlert() {
@@ -30,4 +30,3 @@ export const AlertHandlerProvider = ({ children }) => {
 };
 
 export const useAlertHandlerContext = () => useContext(AlertHandlerContext);
-
