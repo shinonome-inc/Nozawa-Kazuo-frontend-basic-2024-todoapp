@@ -3,7 +3,7 @@ import styled from "styled-components";
 import TEXT from "../../../variables/texts.js";
 import FONTFAMILY from "../../../variables/font_family.js";
 import COLOR from "../../../variables/color.js";
-
+import React from 'react';
 export const AddTaskButton = ({onClick}) => {
   return (
     <StyledButton onClick={(onClick)}>
