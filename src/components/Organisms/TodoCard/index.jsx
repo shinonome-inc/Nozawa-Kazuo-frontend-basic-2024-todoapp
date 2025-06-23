@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts.js";
@@ -32,6 +32,19 @@ export default function TodoCard() {
       );
     }
   };
+
+  useEffect(() => {
+    const TaskJson = localStorage.getItem("taskList");
+    if (TaskJson){
+    setTaskList(JSON.parse(TaskJson))
+    }
+    }, []);
+
+  useEffect(() => {
+    localStorage.setItem("taskList",JSON.stringify(taskList))
+  },[taskList]);
+
+
   return (
     <StyledWrapper>
       <AddTaskButton onClick={onAddTaskButtonClick} />
@@ -54,13 +67,12 @@ const StyledWrapper = styled.div`
   background-color: ${COLOR.LIGHT_BLACK};
   border-radius: 4px;
   padding: 20px;
-  flex-direction: column;
+  align-items: flex-start;
 `;
 const StyledTaskList = styled.div`
   margin-top: 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   
 `;

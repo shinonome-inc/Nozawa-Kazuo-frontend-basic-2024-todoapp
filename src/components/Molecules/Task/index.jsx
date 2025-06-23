@@ -30,7 +30,8 @@ export default function Task({
       ) : (
         <StyledNameAndButtonWrapper>
           <StyledTaskName>{taskName}</StyledTaskName>
-            <EditButton onClick={onEditButtonClick} />
+          <EditButton onClick={onEditButtonClick} />
+        
         </StyledNameAndButtonWrapper>
       )}
     </StyledWrapper>
