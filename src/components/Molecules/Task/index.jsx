@@ -50,6 +50,7 @@ const StyledWrapper = styled.div`
 
 const StyledNameAndButtonWrapper = styled.div`
   display: flex;
+  width: 100%;
   gap: 10px;
   justify-content: space-between;
   width: 100%;
