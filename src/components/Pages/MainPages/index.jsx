@@ -33,5 +33,4 @@ const TodoCardWrapper = styled.div`
     width: 500px;
     max-width: 100%;
 
-
 `
