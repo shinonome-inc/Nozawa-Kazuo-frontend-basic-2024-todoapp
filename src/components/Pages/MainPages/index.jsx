@@ -2,13 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import TodoCard from "../../Organisms/TodoCard/index";
 import {Title} from "../../Atoms/Title/index"
+import TodoCard from "../../Organisms/TodoCard/index";
+import {Title} from "../../Atoms/Title/index"
 
 export default function MainPages() {
     return(
         <StyledWrapper>
             <Title/>
             <TodoCardWrapper>
+            <Title/>
+            <TodoCardWrapper>
             <TodoCard/>
+            </TodoCardWrapper>
             </TodoCardWrapper>
         </StyledWrapper>
         
@@ -24,6 +29,9 @@ const StyledWrapper = styled.div`
     width: 100%;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     @media (max-width: 320px) {
         padding: 20px;
     }
@@ -32,5 +40,6 @@ const StyledWrapper = styled.div`
 const TodoCardWrapper = styled.div`
     width: 500px;
     max-width: 100%;
+
 
 `
