@@ -15,6 +15,7 @@ export default function TodoCard() {
       name: "",
       initializing: true,
     };
+    
     setTaskList([...taskList, newTask]);
   };
 
