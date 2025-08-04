@@ -2,18 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import TodoCard from "../../Organisms/TodoCard/index";
 import {Title} from "../../Atoms/Title/index"
-import TodoCard from "../../Organisms/TodoCard/index";
-import {Title} from "../../Atoms/Title/index"
 
 export default function MainPages() {
     return(
         <StyledWrapper>
             <Title/>
             <TodoCardWrapper>
-            <Title/>
-            <TodoCardWrapper>
             <TodoCard/>
-            </TodoCardWrapper>
             </TodoCardWrapper>
         </StyledWrapper>
         
